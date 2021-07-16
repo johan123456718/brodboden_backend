@@ -1,9 +1,6 @@
 package brodbodenTeam.brodboden_backend.objects;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Food {
@@ -14,6 +11,8 @@ public class Food {
     private int price;
     private String description;
     private String time;
+    @Lob
+    private String picture_data;
 
     public int getFood_id() {
         return food_id;
@@ -53,5 +52,13 @@ public class Food {
 
     public void setTime(String time) {
         this.time = time;
+    }
+
+    public String getPicture_data() {
+        return picture_data;
+    }
+
+    public void setPicture_data(String picture_data) {
+        this.picture_data = picture_data;
     }
 }

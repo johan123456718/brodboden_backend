@@ -13,6 +13,7 @@ CREATE TABLE drink(
     drink_title VARCHAR(256),
     price INT NOT NULL,
     description VARCHAR(256),
+    picture_data TEXT NOT NULL,
     PRIMARY KEY(drink_id)
 );
 
@@ -22,6 +23,7 @@ CREATE TABLE food(
     price INT NOT NULL,
     time VARCHAR(12),
     description VARCHAR(256),
+	picture_data TEXT NOT NULL,
     PRIMARY KEY(food_id)
 );
 
@@ -30,6 +32,7 @@ CREATE TABLE salad(
     salad_title VARCHAR(256),
     price INT NOT NULL,
     description VARCHAR(256),
+    picture_data TEXT NOT NULL,
     PRIMARY KEY(salad_id)
 );
 
@@ -38,6 +41,7 @@ CREATE TABLE desert(
     desert_title VARCHAR(256),
     price INT NOT NULL,
     description VARCHAR(256),
+	picture_data TEXT NOT NULL,
     PRIMARY KEY(desert_id)
 );
 
@@ -53,17 +57,21 @@ CREATE TABLE message(
 
 #DELETE FROM food where food_id = 3;
 
-INSERT INTO drink(drink_title, price, description)
-VALUES("Coca cola", 29, "Läsk");
+INSERT INTO drink(drink_title, price, description, picture_data)
+VALUES("Coca cola", 29, "Coca Cola", "./images/cola.jpg");
 
-INSERT INTO salad(salad_title, price, description)
-VALUES("Räk sallad", 129, "Mixsallad, paprika, majsgurka, tomater, oliver, ägg, hand skalade räkor med island dressing");
+INSERT INTO food(food_title, price, time, description, picture_data)
+VALUES("Biff", 129, "12:00", "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.", "./images/biff.jpg");
+
+INSERT INTO food(food_title, price, time, description, picture_data)
+VALUES("Ägg", 80, "9:00", "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.", "./images/agg.jpg");
+
+INSERT INTO salad(salad_title, price, description, picture_data)
+VALUES("Räk sallad", 129, "Mixsallad, paprika, majsgurka, tomater, oliver, ägg, hand skalade räkor med island dressing",  "./images/raksallad.jpg");
 
 INSERT INTO salad(salad_title, price, description)
 VALUES("Ceasar sallad", 129, "Romansallad, kyckling, parmesan, bacon, krutonger, ceasardressing");
 
-INSERT INTO desert(desert_title, price, description)
-VALUES("Våffla", 50, "Våffla med jordgubbsylt och grädde");
+INSERT INTO desert(desert_title, price, description, picture_data)
+VALUES("Våffla", 50, "Våffla med jordgubbsylt och grädde", "./images/vaffla.jpg");
 
-INSERT INTO food(food_title, price, time, description)
-VALUES("Räk sallad", 129, "", "Mixsallad, paprika, majsgurka, tomater, oliver, ägg, hand skalade räkor med island dressing");
