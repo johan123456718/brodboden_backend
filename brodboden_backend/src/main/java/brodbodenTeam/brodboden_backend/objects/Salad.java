@@ -7,7 +7,7 @@ public class Salad {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int salad_id;
-    private String salad_title;
+    private String title;
     private int price;
     private String description;
 
@@ -22,12 +22,12 @@ public class Salad {
         this.salad_id = salad_id;
     }
 
-    public String getSalad_title() {
-        return salad_title;
+    public String getTitle() {
+        return title;
     }
 
-    public void setSalad_title(String salad_title) {
-        this.salad_title = salad_title;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public int getPrice() {
