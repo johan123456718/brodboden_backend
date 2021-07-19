@@ -7,7 +7,7 @@ public class Desert {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int desert_id;
-    private String desert_title;
+    private String title;
     private int price;
     private String description;
 
@@ -22,12 +22,12 @@ public class Desert {
         this.desert_id = desert_id;
     }
 
-    public String getDesert_title() {
-        return desert_title;
+    public String getTitle() {
+        return title;
     }
 
-    public void setDesert_title(String desert_title) {
-        this.desert_title = desert_title;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public int getPrice() {

@@ -7,7 +7,7 @@ public class Drink {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int drink_id;
-    private String drink_title;
+    private String title;
     private int price;
     private String description;
     @Lob
@@ -21,12 +21,12 @@ public class Drink {
         this.drink_id = drink_id;
     }
 
-    public String getDrink_title() {
-        return drink_title;
+    public String getTitle() {
+        return title;
     }
 
-    public void setDrink_title(String drink_title) {
-        this.drink_title = drink_title;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public int getPrice() {
